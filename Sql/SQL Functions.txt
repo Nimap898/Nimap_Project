@@ -1,0 +1,80 @@
+String Functions
+1.
+Select CHARINDEX('t','Sarthak')--index start with 1 
+--output 4
+2.
+select Length ('Sarthak')
+--output:7
+3.
+Select Upper('Kindergarden')--all characters ar converted into upper case
+output:KINDERGARDEN
+4.
+Select LOWER('KinderGarden')--all characters ar converted into 
+Output:kindergarden
+5.
+Select LTRIM('___kind')-- all left side blank spaces are trim 
+output:kind
+6.
+Select RTRIM('kind___')-- all right side blank spaces are trim
+output:kind
+7.
+Select Trim('___kind___')-- all blank spaces are trim
+output:kind
+8.
+Select left('kindengarden', 4)-- to get the all character before 4 index
+output:kind
+9.
+Select Right('kindengarden', 4)-- to get the all character after 4 index
+output:engarden
+10.
+Select Replace('Kindengerden','gerden','garden')
+output:Kindengarden 
+11.
+Select Substring('Kindengarden',3,5)-- 3 is index or 5 is number of character after index to prit 
+Output:ndeng
+12.
+Select Concat('First','Last')
+output: firstLast
+
+Numeric Function
+
+Select ABS(-565)--to get positive value
+Output: 565
+
+Select Round(5.74)
+output:6
+Select Round(5.74,1)
+output:5.7
+Select Round(5.7436,2)
+output:5.74
+Select Round(5.2)
+output:5
+
+Select truncate(5.7234)
+output:6
+Select truncate(5.2234)
+output:6
+
+Select FLOOR(5.2234)
+Output:5
+
+Select RAND()--random value is given
+outpt:0.001843
+
+Date Function
+1.
+SELECT DATEADD(year, 5, '2017/08/25') AS DateAdd;--1->What is you want to add day,Month or Year 2->how much you want add 3->from to date you want to add
+Output:2022/08/25
+2.
+SELECT GETDATE();--current date or todaydate
+Or
+SELECT CURRENT_TIMESTAMP;
+OutPut:2024/03/21
+3.
+SELECT YEAR('2017/08/25') AS Year;--to get the Year
+Or
+SELECT DATENAME(year, '2017/08/25') AS DatePartString;
+output:2017
+4.
+SELECT DATEDIFF(year,'2011/08/25', '2017/08/25' ) AS DateDiff;
+output:6
