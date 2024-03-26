@@ -1,0 +1,25 @@
+namespace CountLowerAndUpperCase
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = "Hello World!";
+
+            int upper = 0;
+            int lower = 0;
+
+            for (int i = 0; i < str.Length; i++)
+            {
+               char c = str[i];
+               if (c >= 'A' && c <='Z')
+                    upper++;
+
+                if (c >= 'a' && c <= 'z')
+                    lower++;
+            }
+            Console.WriteLine("Upper : "+upper);
+            Console.WriteLine("Lower : " + lower);
+        }
+    }
+}

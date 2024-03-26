@@ -1,0 +1,40 @@
+namespace SwapNumber
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 10;
+            int b = 20;
+
+            Console.WriteLine("Before swap");
+            Console.WriteLine("a :" + a);
+            Console.WriteLine("b :" + b);
+
+            a = a + b; // 10 + 20 = 30
+            b = a - b;// 30 - 20 = B 10
+            a = a - b;// 30 - 10 = A 20 
+
+            Console.WriteLine("after Swap");
+            Console.WriteLine("a :"+a);
+            Console.WriteLine("b :" + b);
+
+            Console.WriteLine();
+            Console.WriteLine("Using XOR");
+
+            Console.WriteLine("Before swap");
+            Console.WriteLine("a :" + a);
+            Console.WriteLine("b :" + b);
+
+            a = a ^ b; // 10 + 20 = 30
+            b = a ^ b;// 30 - 20 = B 10
+            a = a ^ b;// 30 - 10 = A 20 
+
+            Console.WriteLine("after Swap");
+            Console.WriteLine("a :" + a);
+            Console.WriteLine("b :" + b);
+
+
+        }
+    }
+}

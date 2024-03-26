@@ -1,0 +1,45 @@
+using System.Diagnostics.CodeAnalysis;
+using System.Numerics;
+using System.Text;
+
+namespace grouptheanagrams
+{
+    internal class Program
+    {
+        public static List<List<string>> GroupAnagrams(string[] strs)
+        {
+            Dictionary<string, List<string>> map = new Dictionary<string, List<string>>();
+
+           for (int i = 0; i < strs.Length; i++)
+            {
+                string str = strs[i];
+                char[] chars = str.ToCharArray();
+                Array.Sort(chars);
+                string sordedword = new string(chars);
+
+                if (!map.ContainsKey(sordedword))
+                {
+                    map[sordedword] = new List<string>();
+                }
+
+                map[sordedword].Add(str);
+            }
+
+             return map.Values.ToList();
+        }
+
+        static void Main(string[] args)
+        {
+            string[] strs = { "eat", "tea", "tan", "ate", "nat", "bat" };
+
+            List<List<string>> groupedAnagrams = GroupAnagrams(strs);
+
+            foreach (List<string> group in groupedAnagrams)
+            {
+                Console.WriteLine(string.Join(", ", group));
+            }
+
+        }
+        
+    }
+}

@@ -1,0 +1,35 @@
+namespace WordCountString
+{
+    internal class Program
+    {
+        public static void CountWord(string str)
+        {
+            Dictionary<char, int> keyValuePairs = new Dictionary<char, int>();
+            for (int i = 0; i < str.Length; i++) {
+                if (keyValuePairs.ContainsKey(str[i]))
+                {
+                    int temp = keyValuePairs[str[i]];
+                    keyValuePairs.Remove(str[i]);
+                    keyValuePairs.Add(str[i], temp+1);
+                }
+                else
+                {
+                    keyValuePairs.Add(str[i], 1);
+                }
+        }
+            foreach(KeyValuePair<char, int> valuecount in keyValuePairs)
+            {
+                if(valuecount.Key > 0)
+                {
+                    Console.WriteLine(valuecount.Key+" "+valuecount.Value);
+                }
+            }
+            
+        }
+        static void Main(string[] args)
+        {
+            string word = "engineer";
+            CountWord(word);
+        }
+    }
+}
